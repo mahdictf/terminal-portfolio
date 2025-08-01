@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Courier New", monospace;
+  }
+
+  body {
+    background-color: #000000;
+    color: #00ff00;
+  }
+}
+
+@layer utilities {
+  .terminal-text {
+    color: #00ff00;
+  }
+
+  .terminal-prompt {
+    color: #00bfff;
+  }
+}
