@@ -14,7 +14,7 @@ export const useTerminal = () => {
     {
       id: "1",
       type: "output",
-      content: "Hi, I'm Mark Gatere, a Software & AI Engineer.",
+      content: "Hi, I'm Mahdi Rahimi, a Hacker | Developer.",
       timestamp: new Date(),
     },
     {
@@ -50,7 +50,7 @@ export const useTerminal = () => {
       const trimmedCommand = command.trim().toLowerCase();
 
       // Add input to history
-      addLine("input", `gatere@portfolio:~$ ${command}`);
+      addLine("input", `rahimi@portfolio:~$ ${command}`);
 
       // Add to command history
       setCommandHistory((prev) => [...prev, command]);
@@ -75,7 +75,7 @@ export const useTerminal = () => {
         case "about":
           addLine(
             "output",
-            "Software & AI Engineer passionate about building innovative solutions."
+            "Developer & AI Engineer passionate about building innovative solutions."
           );
           addLine(
             "output",
