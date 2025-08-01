@@ -50,7 +50,7 @@ export default function Home() {
       >
         <div className="flex justify-between items-center text-xs text-green-400/70">
           <span>[Interactive 3D Card]</span>
-          <span className="font-mono">gatere@portfolio:~$</span>
+          <span className="font-mono">rahimi@portfolio:~$</span>
           <span>{new Date().toLocaleTimeString()}</span>
         </div>
       </div>
