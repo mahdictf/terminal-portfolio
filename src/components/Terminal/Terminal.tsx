@@ -49,25 +49,27 @@ export default function Terminal() {
 
   return (
     <div className="h-full flex flex-col">
-      {/* Terminal Header */}
-      <div className="flex items-center justify-between border-b border-green-400/30 pb-2 mb-4">
-        <div>
-          <h1 className="text-green-400 text-xl font-bold">Mahdi Rahimi</h1>
-          <p className="text-gray-400 text-sm">Hacker | Develeper</p>
-        </div>
-        <div className="flex space-x-2">
-          <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-          <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-        </div>
-      </div>
-
-      {/* Terminal Content */}
+      {/* Terminal Content Area */}
       <div
         ref={terminalRef}
-        className="flex-1 overflow-y-auto space-y-1 mb-4 cursor-text"
+        className="flex-1 overflow-y-auto space-y-1 mb-4 cursor-text bg-black"
         onClick={handleTerminalClick}
       >
+        {/* Welcome Message */}
+        <div className="mb-4">
+          <div className="text-blue-400 mb-2">gatere@portfolio:~$ welcome</div>
+          <div className="text-yellow-400 mb-1">
+            Hi, I'm Mahdi Rahimi, a Hacker & Developer.
+          </div>
+          <div className="text-white mb-1">
+            Welcome to my interactive 'AI powered' portfolio terminal!!
+          </div>
+          <div className="text-gray-400 mb-4">
+            Type 'help' to see available commands.
+          </div>
+        </div>
+
+        {/* Command History */}
         {history.map((line) => (
           <div key={line.id} className="flex">
             {line.type === "input" ? (
@@ -83,7 +85,7 @@ export default function Terminal() {
 
       {/* Input Line */}
       <div className="flex items-center">
-        <span className="text-blue-400 mr-2">gatere@portfolio:~$</span>
+        <span className="text-blue-400 mr-1">rahimi@portfolio:~$</span>
         <input
           ref={inputRef}
           type="text"
@@ -94,7 +96,7 @@ export default function Terminal() {
           spellCheck={false}
           autoComplete="off"
         />
-        <span className="text-green-400 animate-pulse">|</span>
+        <span className="text-green-400 animate-pulse ml-1">█</span>
       </div>
     </div>
   );

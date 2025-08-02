@@ -10,26 +10,7 @@ export interface TerminalLine {
 }
 
 export const useTerminal = () => {
-  const [history, setHistory] = useState<TerminalLine[]>([
-    {
-      id: "1",
-      type: "output",
-      content: "Hi, I'm Mahdi Rahimi, a Hacker | Developer.",
-      timestamp: new Date(),
-    },
-    {
-      id: "2",
-      type: "output",
-      content: "Welcome to my interactive 'AI powered' portfolio terminal!!",
-      timestamp: new Date(),
-    },
-    {
-      id: "3",
-      type: "output",
-      content: "Type 'help' to see available commands.",
-      timestamp: new Date(),
-    },
-  ]);
+  const [history, setHistory] = useState<TerminalLine[]>([]);
 
   const [currentInput, setCurrentInput] = useState("");
   const [commandHistory, setCommandHistory] = useState<string[]>([]);
@@ -50,7 +31,7 @@ export const useTerminal = () => {
       const trimmedCommand = command.trim().toLowerCase();
 
       // Add input to history
-      addLine("input", `rahimi@portfolio:~$ ${command}`);
+      addLine("input", `gatere@portfolio:~$ ${command}`);
 
       // Add to command history
       setCommandHistory((prev) => [...prev, command]);
@@ -75,12 +56,13 @@ export const useTerminal = () => {
         case "about":
           addLine(
             "output",
-            "Developer & AI Engineer passionate about building innovative solutions."
+            "Software & AI Engineer passionate about building innovative solutions."
           );
           addLine(
             "output",
             "I specialize in modern web technologies and artificial intelligence."
           );
+          addLine("output", "Always learning and exploring new technologies.");
           break;
 
         case "projects":
@@ -94,6 +76,10 @@ export const useTerminal = () => {
             "• AI-Powered Web Applications - React, Python, TensorFlow"
           );
           addLine("output", "• Full-Stack E-commerce Platform - MERN Stack");
+          addLine(
+            "output",
+            "• Real-time Chat Application - Socket.io, Node.js"
+          );
           break;
 
         case "skills":
@@ -105,6 +91,7 @@ export const useTerminal = () => {
           addLine("output", "• Backend: Node.js, Python, Express, FastAPI");
           addLine("output", "• 3D Graphics: Three.js, WebGL");
           addLine("output", "• AI/ML: TensorFlow, PyTorch, OpenAI APIs");
+          addLine("output", "• Database: MongoDB, PostgreSQL, Redis");
           break;
 
         case "experience":
@@ -119,8 +106,10 @@ export const useTerminal = () => {
 
         case "contact":
           addLine("output", "Contact Information:");
-          addLine("output", "• Email: me#mahdirahimi.me");
-          addLine("output", "• GitHub: /mahdictf");
+          addLine("output", "• Email: mahdi@mahdirahimi.me");
+          addLine("output", "• LinkedIn: linkedin.com/in/mahdi");
+          addLine("output", "• GitHub: github.com/mahdictf");
+          addLine("output", "• Portfolio: mahdirahimi.me");
           break;
 
         case "education":
@@ -130,6 +119,7 @@ export const useTerminal = () => {
             "output",
             "• Bachelor of Engineering in Software Engineering"
           );
+          addLine("output", "• Various online certifications and courses");
           break;
 
         case "certifications":
@@ -137,6 +127,7 @@ export const useTerminal = () => {
           addLine("output", "• AWS Certified Solutions Architect");
           addLine("output", "• Google Cloud Professional Developer");
           addLine("output", "• Microsoft Azure AI Engineer");
+          addLine("output", "• MongoDB Certified Developer");
           break;
 
         case "leadership":
@@ -144,6 +135,18 @@ export const useTerminal = () => {
           addLine("output", "• Tech Team Lead - Led team of 5 developers");
           addLine("output", "• Open Source Maintainer - 10k+ GitHub stars");
           addLine("output", "• Community Speaker - 20+ tech conferences");
+          addLine("output", "• Mentor - Guided 15+ junior developers");
+          break;
+
+        case "sudo":
+          addLine(
+            "output",
+            "Nice try! But this is a portfolio, not a real terminal 😉"
+          );
+          addLine(
+            "output",
+            "You have enough permissions to explore my experience though!"
+          );
           break;
 
         case "clear":
