@@ -57,9 +57,9 @@ export default function Terminal() {
       >
         {/* Welcome Message */}
         <div className="mb-4">
-          <div className="text-blue-400 mb-2">gatere@portfolio:~$ welcome</div>
+          <div className="text-blue-400 mb-2">rahimi@portfolio:~$ welcome</div>
           <div className="text-yellow-400 mb-1">
-            Hi, I'm Mark Gatere, a Software & AI Engineer.
+            Hi, I'm Mahdi Rahimi, a Ethical hacker & Developer.
           </div>
           <div className="text-white mb-1">
             Welcome to my interactive 'AI powered' portfolio terminal!!
@@ -84,7 +84,7 @@ export default function Terminal() {
 
         {/* Current Input Line */}
         <div className="flex items-center">
-          <span className="text-blue-400 mr-1">gatere@portfolio:~$</span>
+          <span className="text-blue-400 mr-1">rahimi@portfolio:~$</span>
           <input
             ref={inputRef}
             type="text"
@@ -101,7 +101,7 @@ export default function Terminal() {
 
       {/* Current Input Line */}
       <div className="flex items-center">
-        <span className="text-blue-400 mr-1">gatere@portfolio:~$</span>
+        <span className="text-blue-400 mr-1">rahimi@portfolio:~$</span>
         <input
           ref={inputRef}
           type="text"

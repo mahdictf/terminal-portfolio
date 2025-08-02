@@ -17,18 +17,16 @@ export default function Home() {
         />
       </div>
 
+      {/* Top Left Logo */}
+      <div className="absolute top-4 left-4 z-20">
+        <h1 className="text-green-400 text-xl font-bold">Mahdi Rahimi</h1>
+        <p className="text-gray-400 text-sm"> Ethical Hacker | Developer</p>
+      </div>
+
       {/* Main Content Container */}
       <div className="flex h-screen">
         {/* Left Panel - Profile Card */}
-        <div className="w-1/3 flex flex-col items-center justify-center p-8 relative">
-          {/* Top Navigation Bar */}
-          <div className="absolute top-4 left-4 right-4">
-            <div className="text-left">
-              <h1 className="text-green-400 text-xl font-bold">Mark Gatere</h1>
-              <p className="text-gray-400 text-sm">Software Engineer</p>
-            </div>
-          </div>
-
+        <div className="w-1/3 flex flex-col relative">
           {/* Profile Card Container */}
           <div className="flex-1 flex items-center justify-center">
             <ProfileCard />
