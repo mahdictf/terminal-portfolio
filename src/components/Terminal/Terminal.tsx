@@ -52,14 +52,14 @@ export default function Terminal() {
       {/* Terminal Content Area */}
       <div
         ref={terminalRef}
-        className="flex-1 overflow-y-auto space-y-1 mb-4 cursor-text bg-black"
+        className="flex-1 overflow-y-auto space-y-1 cursor-text bg-black"
         onClick={handleTerminalClick}
       >
         {/* Welcome Message */}
         <div className="mb-4">
           <div className="text-blue-400 mb-2">gatere@portfolio:~$ welcome</div>
           <div className="text-yellow-400 mb-1">
-            Hi, I'm Mahdi Rahimi, a Hacker & Developer.
+            Hi, I'm Mark Gatere, a Software & AI Engineer.
           </div>
           <div className="text-white mb-1">
             Welcome to my interactive 'AI powered' portfolio terminal!!
@@ -81,11 +81,27 @@ export default function Terminal() {
             )}
           </div>
         ))}
+
+        {/* Current Input Line */}
+        <div className="flex items-center">
+          <span className="text-blue-400 mr-1">gatere@portfolio:~$</span>
+          <input
+            ref={inputRef}
+            type="text"
+            value={currentInput}
+            onChange={(e) => setCurrentInput(e.target.value)}
+            onKeyDown={handleKeyDown}
+            className="bg-transparent outline-none flex-1 text-green-400 font-mono"
+            spellCheck={false}
+            autoComplete="off"
+          />
+          <span className="text-green-400 animate-pulse ml-1">█</span>
+        </div>
       </div>
 
-      {/* Input Line */}
+      {/* Current Input Line */}
       <div className="flex items-center">
-        <span className="text-blue-400 mr-1">rahimi@portfolio:~$</span>
+        <span className="text-blue-400 mr-1">gatere@portfolio:~$</span>
         <input
           ref={inputRef}
           type="text"

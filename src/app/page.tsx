@@ -24,8 +24,8 @@ export default function Home() {
           {/* Top Navigation Bar */}
           <div className="absolute top-4 left-4 right-4">
             <div className="text-left">
-              <h1 className="text-green-400 text-xl font-bold">Mahdi Rahimi</h1>
-              <p className="text-gray-400 text-sm">Hacker | Developer</p>
+              <h1 className="text-green-400 text-xl font-bold">Mark Gatere</h1>
+              <p className="text-gray-400 text-sm">Software Engineer</p>
             </div>
           </div>
 
@@ -101,7 +101,7 @@ export default function Home() {
       {/* Bottom Status Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-black border-t border-green-400/30 p-2">
         <div className="flex justify-between items-center text-xs">
-          <span className="text-green-400">rahimi@portfolio:~$</span>
+          <span className="text-green-400">[Interactive 3D Card]</span>
           <span className="text-green-400">
             {new Date().toLocaleDateString("en-US", {
               weekday: "short",
@@ -112,7 +112,8 @@ export default function Home() {
               minute: "2-digit",
               second: "2-digit",
               hour12: false,
-            })}
+            })}{" "}
+            AM
           </span>
         </div>
       </div>
