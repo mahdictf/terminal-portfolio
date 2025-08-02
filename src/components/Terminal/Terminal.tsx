@@ -98,22 +98,6 @@ export default function Terminal() {
           <span className="text-green-400 animate-pulse ml-1">█</span>
         </div>
       </div>
-
-      {/* Current Input Line */}
-      <div className="flex items-center">
-        <span className="text-blue-400 mr-1">rahimi@portfolio:~$</span>
-        <input
-          ref={inputRef}
-          type="text"
-          value={currentInput}
-          onChange={(e) => setCurrentInput(e.target.value)}
-          onKeyDown={handleKeyDown}
-          className="bg-transparent outline-none flex-1 text-green-400 font-mono"
-          spellCheck={false}
-          autoComplete="off"
-        />
-        <span className="text-green-400 animate-pulse ml-1">█</span>
-      </div>
     </div>
   );
 }
